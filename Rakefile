@@ -16,10 +16,9 @@ Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "integer"
   gem.homepage = "http://github.com/mspwong/integer"
-  gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "mspwong@hotmail.com"
+  gem.license = "mspwong"
+  gem.summary = "extends Integer by adding fibonancci support"
+  gem.description = "This gem adds to the Integer type an extra instance method 'closest_fibonacci_smaller_or_equal_to' which returns the largest fibonancci number that is less than or equal to the integer."
   gem.authors = ["Mary Wong"]
   # dependencies defined in Gemfile
 end
