@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
     "config/environment.rb",
     "config/environments/test.rb",
     "config/routes.rb",
+    "integer.gemspec",
     "lib/integer.rb",
     "test/test_helper.rb",
     "test/test_integer.rb"
