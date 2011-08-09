@@ -98,6 +98,8 @@ class TestInteger < ActiveSupport::TestCase
       assert_equal 13, 15.closest_fibonacci_smaller_or_equal_to
       assert_equal 13, 20.closest_fibonacci_smaller_or_equal_to
       assert_equal 21, 21.closest_fibonacci_smaller_or_equal_to
+      assert_equal 89, 99.closest_fibonacci_smaller_or_equal_to
+      assert_equal 144, 156.closest_fibonacci_smaller_or_equal_to
 
       test_fixnum = 99999999
       assert test_fixnum.is_a?(Fibonacci)
