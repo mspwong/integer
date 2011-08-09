@@ -1,6 +1,6 @@
 = integer
 
-Description goes here.
+extends the Integer class with the instance method 'closest_fibonacci_smaller_or_equal_to' which returns the largest fibonacci number that is less than or equal to the integer.  It is released on rubygems.org as https://rubygems.org/gems/integer"
 
 == Contributing to integer
  
