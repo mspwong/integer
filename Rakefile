@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "integer"
   gem.homepage = "http://github.com/mspwong/integer"
   gem.license = "mspwong"
-  gem.summary = "extends Integer by adding fibonancci support"
-  gem.description = "This gem adds to the Integer type an extra instance method 'closest_fibonacci_smaller_or_equal_to' which returns the largest fibonancci number that is less than or equal to the integer."
+  gem.summary = "extends Integer by adding fibonacci support"
+  gem.description = "This gem adds to the Integer type an extra instance method 'closest_fibonacci_smaller_or_equal_to' which returns the largest fibonacci number that is less than or equal to the integer."
   gem.authors = ["Mary Wong"]
   # dependencies defined in Gemfile
 end

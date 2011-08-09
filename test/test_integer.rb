@@ -8,17 +8,17 @@ class TestInteger < ActiveSupport::TestCase
       should "retain core Integer behavior" do
         test_fixnum = 4
         assert_equal Fixnum, test_fixnum.class
-        assert test_fixnum.is_a?(Fixnum)
-        assert test_fixnum.is_a?(Integer)
-        assert test_fixnum.is_a?(Numeric)
-        assert test_fixnum.is_a?(Precision)
-        assert test_fixnum.is_a?(Object)
+        assert test_fixnum.is_a? Fixnum
+        assert test_fixnum.is_a? Integer
+        assert test_fixnum.is_a? Numeric
+        assert test_fixnum.is_a? Precision
+        assert test_fixnum.is_a? Object
         assert test_fixnum.integer?
         assert test_fixnum == 4
-        assert test_fixnum.eql?(4)
+        assert test_fixnum.eql? 4
         four = 4
         assert test_fixnum == four
-        assert test_fixnum.eql?(four)
+        assert test_fixnum.eql? four
         assert test_fixnum == 4.0
         assert !test_fixnum.eql?(4.0)
         assert !test_fixnum.zero?
@@ -29,7 +29,7 @@ class TestInteger < ActiveSupport::TestCase
         assert_equal 1, test_fixnum.modulo(3)
         assert_equal "4", test_fixnum.to_s
         assert_equal 2, test_fixnum / 2
-        assert_equal -4, (test_fixnum * -1)
+        assert_equal -4, test_fixnum * -1
         assert_equal test_fixnum, (test_fixnum * -1).abs
         assert test_fixnum.even?
         assert !test_fixnum.odd?
@@ -39,8 +39,8 @@ class TestInteger < ActiveSupport::TestCase
 
         test_bignum = 999999999999999999999999999999
         assert_equal Bignum, test_bignum.class
-        assert test_bignum.is_a?(Bignum)
-        assert test_bignum.is_a?(Integer)
+        assert test_bignum.is_a? Bignum
+        assert test_bignum.is_a? Integer
         assert test_bignum < test_bignum + 1
         assert test_bignum > test_bignum - 1
         assert_not_nil test_bignum.hash
