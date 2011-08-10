@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{integer}
-  s.version = "0.1.3"
+  s.version = "0.1.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mary Wong"]
@@ -23,10 +23,8 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "config/boot.rb",
-    "config/database.yml",
     "config/environment.rb",
     "config/environments/test.rb",
-    "config/routes.rb",
     "integer.gemspec",
     "lib/integer.rb",
     "test/test_helper.rb",
