@@ -39,5 +39,7 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
 
-  config.action_controller.session = { :key => "_myapp_session", :secret => "e6fb6fc797f7c95510086db2a45d577d" }
+  # Don't load rails MVC
+  config.frameworks -= [ :active_record, :action_controller, :action_view ]
+
 end
