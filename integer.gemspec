@@ -5,12 +5,12 @@
 
 Gem::Specification.new do |s|
   s.name = %q{integer}
-  s.version = "0.1.4"
+  s.version = "0.1.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mary Wong"]
-  s.date = %q{2011-08-09}
-  s.description = %q{This gem adds to the Integer type an extra instance method 'closest_fibonacci_smaller_or_equal_to' which returns the largest fibonacci number that is less than or equal to the integer.}
+  s.date = %q{2011-08-11}
+  s.description = %q{Adds to Integer the method 'closest_fibonacci' which returns the largest fibonacci number that is less than or equal to the integer.}
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -34,7 +34,7 @@ Gem::Specification.new do |s|
   s.licenses = ["mspwong"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.6.2}
-  s.summary = %q{extends Integer by adding fibonacci support}
+  s.summary = %q{Extends Integer with fibonacci support}
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
