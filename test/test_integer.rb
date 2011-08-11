@@ -61,57 +61,57 @@ class TestInteger < ActiveSupport::TestCase
     end
   end
 
-  context "calling closest_fibonacci_smaller_or_equal_to on a non-integer" do
+  context "calling closest_fibonacci on a non-integer" do
     should "throw exception" do
-      assert_raise(NoMethodError) { 0.5.closest_fibonacci_smaller_or_equal_to }
-      assert_raise(NoMethodError) { 4.5.closest_fibonacci_smaller_or_equal_to }
-      assert_raise(NoMethodError) { -0.5.closest_fibonacci_smaller_or_equal_to }
-      assert_raise(NoMethodError) { "abc".closest_fibonacci_smaller_or_equal_to }
+      assert_raise(NoMethodError) { 0.5.closest_fibonacci }
+      assert_raise(NoMethodError) { 4.5.closest_fibonacci }
+      assert_raise(NoMethodError) { -0.5.closest_fibonacci }
+      assert_raise(NoMethodError) { "abc".closest_fibonacci }
     end
   end
 
-  context "calling closest_fibonacci_smaller_or_equal_to on a negative integer" do
+  context "calling closest_fibonacci on a negative integer" do
     should "throw exception" do
-      assert_raise(RuntimeError) { -1.closest_fibonacci_smaller_or_equal_to }
+      assert_raise(RuntimeError) { -1.closest_fibonacci }
     end
   end
 
-  context "calling closest_fibonacci_smaller_or_equal_to on a positive integer or zero" do
+  context "calling closest_fibonacci on a positive integer or zero" do
     should "return the correct value" do
-      assert_equal 0, -0.closest_fibonacci_smaller_or_equal_to
-      assert_equal 0, 0.closest_fibonacci_smaller_or_equal_to
-      assert_equal 1, 1.closest_fibonacci_smaller_or_equal_to
-      assert_equal 2, 2.closest_fibonacci_smaller_or_equal_to
-      assert_equal 3, 3.closest_fibonacci_smaller_or_equal_to
-      assert_equal 3, 3.closest_fibonacci_smaller_or_equal_to
-      assert_equal 5, 5.closest_fibonacci_smaller_or_equal_to
-      assert_equal 5, 6.closest_fibonacci_smaller_or_equal_to
-      assert_equal 5, 7.closest_fibonacci_smaller_or_equal_to
-      assert_equal 8, 8.closest_fibonacci_smaller_or_equal_to
-      assert_equal 8, 9.closest_fibonacci_smaller_or_equal_to
-      assert_equal 8, 10.closest_fibonacci_smaller_or_equal_to
-      assert_equal 8, 11.closest_fibonacci_smaller_or_equal_to
-      assert_equal 8, 12.closest_fibonacci_smaller_or_equal_to
-      assert_equal 13, 13.closest_fibonacci_smaller_or_equal_to
-      assert_equal 13, 14.closest_fibonacci_smaller_or_equal_to
-      assert_equal 13, 15.closest_fibonacci_smaller_or_equal_to
-      assert_equal 13, 15.closest_fibonacci_smaller_or_equal_to
-      assert_equal 13, 20.closest_fibonacci_smaller_or_equal_to
-      assert_equal 21, 21.closest_fibonacci_smaller_or_equal_to
-      assert_equal 89, 99.closest_fibonacci_smaller_or_equal_to
-      assert_equal 144, 156.closest_fibonacci_smaller_or_equal_to
+      assert_equal 0, -0.closest_fibonacci
+      assert_equal 0, 0.closest_fibonacci
+      assert_equal 1, 1.closest_fibonacci
+      assert_equal 2, 2.closest_fibonacci
+      assert_equal 3, 3.closest_fibonacci
+      assert_equal 3, 3.closest_fibonacci
+      assert_equal 5, 5.closest_fibonacci
+      assert_equal 5, 6.closest_fibonacci
+      assert_equal 5, 7.closest_fibonacci
+      assert_equal 8, 8.closest_fibonacci
+      assert_equal 8, 9.closest_fibonacci
+      assert_equal 8, 10.closest_fibonacci
+      assert_equal 8, 11.closest_fibonacci
+      assert_equal 8, 12.closest_fibonacci
+      assert_equal 13, 13.closest_fibonacci
+      assert_equal 13, 14.closest_fibonacci
+      assert_equal 13, 15.closest_fibonacci
+      assert_equal 13, 15.closest_fibonacci
+      assert_equal 13, 20.closest_fibonacci
+      assert_equal 21, 21.closest_fibonacci
+      assert_equal 89, 99.closest_fibonacci
+      assert_equal 144, 156.closest_fibonacci
 
       test_fixnum = 99999999
       assert test_fixnum.is_a?(Fibonacci)
       assert test_fixnum.is_a?(Fixnum)
-      assert_equal 63245986, test_fixnum.closest_fibonacci_smaller_or_equal_to
+      assert_equal 63245986, test_fixnum.closest_fibonacci
 
       test_bignum = 999999999999999999999999999999
       assert test_bignum.is_a?(Fibonacci)
       assert test_bignum.is_a?(Bignum)
-      assert_equal 898923707008479989274290850145, test_bignum.closest_fibonacci_smaller_or_equal_to
+      assert_equal 898923707008479989274290850145, test_bignum.closest_fibonacci
 
-      assert_not_nil Time.now.to_i.closest_fibonacci_smaller_or_equal_to
+      assert_not_nil Time.now.to_i.closest_fibonacci
     end
   end
 
