@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{integer}
-  s.version = "0.1.5"
+  s.version = "0.1.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mary Wong"]
-  s.date = %q{2011-08-11}
+  s.date = %q{2011-08-12}
   s.description = %q{Adds to Integer the method 'closest_fibonacci' which returns the largest fibonacci number that is less than or equal to the integer.}
   s.extra_rdoc_files = [
     "LICENSE.txt",
